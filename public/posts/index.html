@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Yangwang</title>
+    <title>Fire Cat</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
     <meta name="generator" content="Hugo 0.147.5">
@@ -31,8 +31,8 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Yangwang" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Yangwang" />
+      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Fire Cat" />
+      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Fire Cat" />
       
     
 
@@ -41,7 +41,7 @@
     
 
     <meta property="og:url" content="https://example.org/posts/">
-  <meta property="og:site_name" content="Yangwang">
+  <meta property="og:site_name" content="Fire Cat">
   <meta property="og:title" content="Posts">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
@@ -65,7 +65,7 @@
   <div class="flex-l center items-center justify-between">
     <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
       
-        Yangwang
+        Fire Cat
       
     </a>
     <div class="flex-l items-center">
@@ -99,15 +99,147 @@
   <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/ui_script_generator/" class="link black dim">
-        UI_Script_Generator
+      <a href="/posts/ui-script-generator-doc-cn/" class="link black dim">
+        UI Script Generator文档
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="简介">简介</h2>
-<h2 id="使用">使用</h2>
+      <h1 id="设置文件">设置文件</h1>
+<h2 id="文件">文件</h2>
+<ul>
+<li>手动创建设置文件的操作不是必须的，因为在每次启动生成器时，生成器会去<strong>Editor&gt;UIScriptGenerator</strong>目录查找是否有已存在的设置文件，若未找到则会自动在该位置生成一个新的设置文件。</li>
+<li>若需要手动创建设置文件，则在菜单栏中选择：<strong>Tools&gt;UI Script Generator&gt;Create Setting</strong>，将会在<strong>Editor&gt;UIScriptGenerator</strong>目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。</li>
+<li>设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在<strong>Editor&gt;UIScriptGenerator</strong>目录下再新建一个。</li>
+</ul>
+<h2 id="选项">选项</h2>
+<ul>
+<li>
+<p><strong>Generation Data Save Path</strong></p>
+<ul>
+<li>UI预制体生成UI脚本的相关数据存储在一个与预制体同名的ScriptObject中，这些ScriptObject都存储在这个目录。</li>
+</ul>
+</li>
+<li>
+<p><strong>Ui Script Save Path</strong></p>
+<ul>
+<li>生成的UI脚本的存储目录。</li>
+</ul>
+</li>
+<li>
+<p><strong>Ui Script Assembly</strong></p>
+<ul>
+<li>生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。</li>
+</ul>
+</li>
+<li>
+<p><strong>Ui Script Name Space</strong></p>
+<ul>
+<li>生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目的命名空间而定，可以为空。</li>
+</ul>
+</li>
+<li>
+<p><strong>Ui Panel Base Class Name</strong></p>
+<ul>
+<li>面板UI对象的基类的名称。若此设置不为空，则生成面板UI脚本时将自动继承自该名称对应的类。UIPanelBase是作为示例的面板UI基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime目录，可根据情况删除（设置中的基类名称也要同步删除）。</li>
+</ul>
+</li>
+<li>
+<p><strong>Ui Widget Base Class Name</strong></p>
+<ul>
+<li>挂件UI对象的基类的名称。若此设置不为空，则生成挂件UI脚本时将自动继承自该名称对应的类。UIWidgetBase是作为示例的挂件UI基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime目录，可根据情况删除（设置中的基类名称也要同步删除）。</li>
+</ul>
+</li>
+<li>
+<p><strong>Add Suffix</strong></p>
+<ul>
+<li>是否在变量名之后添加对应组件的名称缩写。此设置的目的是避免在生成同一节点下的多个组件变量时出现变量名冲突。当然你也可以手动修改每个变量名来解决冲突。</li>
+</ul>
+</li>
+<li>
+<p><strong>SuffixList</strong></p>
+<ul>
+<li>组件名称缩写列表。在这里你可以定义每个组件的名称缩写，若为获取到某个组件的名称缩写，则使用组件的完整名称作为后缀。</li>
+</ul>
+</li>
+<li>
+<p><strong>Components Has Callback</strong></p>
+<ul>
+<li>在这里可以定义拥有回调委托的组件，例如Button组件拥有onClick回调，Slider组件拥有onValueChanged回调等等。</li>
+<li>只有添加到这个列表中组件才会显示“Generate Callback Func”选项</li>
+</ul>
+</li>
+</ul>
+<h1 id="教程">教程</h1>
+<ul>
+<li>
+<p><strong>双击一个UI预制体进入预制体编辑窗口</strong></p>
+<ul>
+<li>生成器的大部分功能都是基于预制体，只有在预制体窗口下才能激活生成器。并且预制体的根节点必须添加有Canvas组件，否则也不能激活生成器。</li>
+</ul>
+</li>
+<li>
+<p><strong>在菜单栏中选择Tools&gt;UI Script Generator&gt;Enable</strong></p>
+<ul>
+<li>这将激活生成器，你会在Hierarchy窗口看到根节点右边出现“Exit”、“Save”两个按钮，这代表着生成器激活成功。</li>
+<li>点击Exit按钮将退出生成器</li>
+<li>点击Save按钮将弹出脚本生成设置窗口</li>
+</ul>
+</li>
+<li>
+<p><strong>选中任意一个子节点</strong></p>
+<ul>
+<li>在Inspector窗口中可以看到RectTransform组件下方出现了多个复选项，格式为“Generate xxx”，它们表示当前节点可以获取到的组件。</li>
+</ul>
+</li>
+<li>
+<p><strong>勾选任意一个选项</strong></p>
+<ul>
+<li>在其下方会出现“Variable Name”文本框，其中的文本代表生成的脚本中用于存储该组件的变量的名称。你可以随意修改该名称，但不能为空。</li>
+<li>若勾选的组件已注册到了设置文件的<strong>Components Has Callback</strong>中，则还会出现“Generate Callback Func”选项。若勾选此选项，在生成脚本时会生成该组件的回调函数并添加到回调委托。例如Button组件，名称为Select，则将生成<strong>OnSelectBtnClick</strong>回调函数，并添加到onClick委托。</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>组件</th>
+          <th>回调委托</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Button</td>
+          <td>onClick</td>
+      </tr>
+      <tr>
+          <td>Slider</td>
+          <td>onValueChanged</td>
+      </tr>
+      <tr>
+          <td>Toggle</td>
+          <td>onValueChanged</td>
+      </tr>
+      <tr>
+          <td>Dropdown、TMP_Dropdown</td>
+          <td>onValueChanged</td>
+      </tr>
+      <tr>
+          <td>InputField</td>
+          <td>onValueChanged、onEndEdit、onSubmit</td>
+      </tr>
+      <tr>
+          <td>TMP_InputField</td>
+          <td>onValueChanged、onEndEdit、onSubmit、onSelect、onDeselect</td>
+      </tr>
+      <tr>
+          <td>ScrollRect</td>
+          <td>onValueChanged</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p><strong>保存并生成</strong></p>
     </div>
-    <a href="/posts/ui_script_generator/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/ui-script-generator-doc-cn/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -119,7 +251,7 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://example.org/" >
-    &copy;  Yangwang 2025 
+    &copy;  Fire Cat 2025 
   </a>
     <div><div class="ananke-socials"></div>
 </div>
