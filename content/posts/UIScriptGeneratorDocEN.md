@@ -19,8 +19,12 @@ title = 'UI Script Generator Documentation'
 
 * **Generation Data Save Path**
   * The data associated with generating a UI prefab script is stored in a ScriptObject object with the same name as the prefab, and these ScriptObject objects are stored in this directory.
+  * **Note: The default directory is “UIScriptGenerator/Demo/GenerationData”, this is a sample directory, you can change it to your desired directory**.
 * **Ui Script Save Path**
   * Storage directory for generated UI scripts.
+  * **Note: The default directory is “UIScriptGenerator/Demo/Scripts/UI”, this is a sample directory, you can change it to your desired directory**.
+* **AutoAddComponent**
+  * If checked, it will be automatically added to the prefab after script generation. Only objects that inherit from MonoBehaviour can be added to GameObject.
 * **Ui Script Assembly**
   * The assembly where the generated UI scripts are located. This will be used to query for generated script object and automatically add it to the corresponding prefab, if this is set to null no automatic addition will be done.
 * **Ui Script Name Space**

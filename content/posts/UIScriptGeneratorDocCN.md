@@ -19,12 +19,20 @@ title = 'UI Script Generator文档'
 
 * **Generation Data Save Path**
   * 生成UI预制体脚本的相关数据存储在一个与预制体同名的ScriptObject对象中，这些ScriptObject对象都存储在这个目录。
+  * **注意：默认设置目录为“UIScriptGenerator/Demo/GenerationData”，这是一个示例目录，你可以修改为你需要的目录**
 * **Ui Script Save Path**
-* 生成的UI脚本的存储目录。
+  * 生成的UI脚本的存储目录。
+  * **注意：默认设置目录为“UIScriptGenerator/Demo/Scripts/UI”，这是一个示例目录，你可以修改为你需要的目录**
+
+* **AutoAddComponent**
+  * 若勾选，在脚本生成完成后将自动把它添加到预制体上。只有继承自MonoBehaviour的对象才能添加到GameObject上。
+
 * **Ui Script Assembly**
-* 生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
+  * 生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
+
 * **Ui Script Name Space**
-* 生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。
+  * 生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。
+
 * **Ui Panel Base Class Name**
 
   * 面板类型的UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIPanelBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator>Runtime>UIPanelBase.cs，可根据情况删除（设置中的基类名称也要同步删除）。

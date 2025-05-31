@@ -145,25 +145,33 @@
 <p><strong>Generation Data Save Path</strong></p>
 <ul>
 <li>生成UI预制体脚本的相关数据存储在一个与预制体同名的ScriptObject对象中，这些ScriptObject对象都存储在这个目录。</li>
+<li><strong>注意：默认设置目录为“UIScriptGenerator/Demo/GenerationData”，这是一个示例目录，你可以修改为你需要的目录</strong></li>
 </ul>
 </li>
 <li>
 <p><strong>Ui Script Save Path</strong></p>
+<ul>
+<li>生成的UI脚本的存储目录。</li>
+<li><strong>注意：默认设置目录为“UIScriptGenerator/Demo/Scripts/UI”，这是一个示例目录，你可以修改为你需要的目录</strong></li>
+</ul>
 </li>
 <li>
-<p>生成的UI脚本的存储目录。</p>
+<p><strong>AutoAddComponent</strong></p>
+<ul>
+<li>若勾选，在脚本生成完成后将自动把它添加到预制体上。只有继承自MonoBehaviour的对象才能添加到GameObject上。</li>
+</ul>
 </li>
 <li>
 <p><strong>Ui Script Assembly</strong></p>
-</li>
-<li>
-<p>生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。</p>
+<ul>
+<li>生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。</li>
+</ul>
 </li>
 <li>
 <p><strong>Ui Script Name Space</strong></p>
-</li>
-<li>
-<p>生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。</p>
+<ul>
+<li>生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。</li>
+</ul>
 </li>
 <li>
 <p><strong>Ui Panel Base Class Name</strong></p>
@@ -221,52 +229,6 @@
 </li>
 <li>
 <p><strong>勾选任意一个选项</strong></p>
-<ul>
-<li>在其下方会出现“Variable Name”文本框，其中的文本代表生成的脚本中用于存储该组件对象的变量的名称。你可以随意修改该名称，但不能为空。</li>
-<li>若勾选的组件已注册到了设置文件的<strong>Components Has Callback</strong>中，则还会出现“Generate Callback Func”选项。若勾选此选项，在生成脚本时会生成该组件的回调函数并自动添加到回调委托。例如Button组件，名称为Select，则将生成<strong>OnSelectBtnClick</strong>回调函数，并添加到<strong>onClick</strong>委托。</li>
-<li>默认设置中的组件及其回调委托</li>
-</ul>
-<table>
-  <thead>
-      <tr>
-          <th>组件</th>
-          <th>回调委托</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Button</td>
-          <td>onClick</td>
-      </tr>
-      <tr>
-          <td>Slider</td>
-          <td>onValueChanged</td>
-      </tr>
-      <tr>
-          <td>Toggle</td>
-          <td>onValueChanged</td>
-      </tr>
-      <tr>
-          <td>Dropdown、TMP_Dropdown</td>
-          <td>onValueChanged</td>
-      </tr>
-      <tr>
-          <td>InputField</td>
-          <td>onValueChanged、onEndEdit、onSubmit</td>
-      </tr>
-      <tr>
-          <td>TMP_InputField</td>
-          <td>onValueChanged、onEndEdit、onSubmit、onSelect、onDeselect</td>
-      </tr>
-      <tr>
-          <td>ScrollRect</td>
-          <td>onValueChanged</td>
-      </tr>
-  </tbody>
-</table>
-</li>
-<li>
-<p><strong>保存并生成</strong></p>
     </div>
     <a href="/posts/uiscriptgeneratordoccn/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
