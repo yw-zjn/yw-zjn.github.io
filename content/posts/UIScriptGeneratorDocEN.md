@@ -138,3 +138,8 @@ Solution：
 * Manually disable the generator by selecting **Tools>UI Script Generator>Disable** in the menu bar, and then activate it again.
 * Restart the Unity editor.
 * Delete the generation data file corresponding to the prefab (same name as the prefab, stored in the directory defined by the **Generation Data Save Path** option in the settings file), then reactivate it.
+
+## Unable to automatically add scripts to prefabs when first generated.
+
+* Check if the settings of **Ui Script Assembly** and **Ui Script Name Space** are correct.
+* The set assembly may not have been loaded, try generating the script again.

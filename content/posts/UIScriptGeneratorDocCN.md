@@ -24,8 +24,7 @@ title = 'UI Script Generator文档'
 * **Ui Script Assembly**
 * 生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
 * **Ui Script Name Space**
-
-  * 生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。
+* 生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。
 * **Ui Panel Base Class Name**
 
   * 面板类型的UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIPanelBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator>Runtime>UIPanelBase.cs，可根据情况删除（设置中的基类名称也要同步删除）。
@@ -138,3 +137,8 @@ title = 'UI Script Generator文档'
 * 在菜单栏中选择**Tools>UI Script Generator>Disable**，手动禁用生成器，然后再激活
 * 重启Unity编辑器
 * 删除预制体对应的生成数据文件（与预制体同名，存储在设置文件**Generation Data Save Path**选项定义的目录中），然后重新激活
+
+## 第一次生成时无法自动添加脚本到预制体
+
+* 检查**Ui Script Assembly**、**Ui Script Name Space**设置是否正确
+* 可能设置的程序集还未被加载，尝试再次生成脚本
