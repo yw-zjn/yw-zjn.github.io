@@ -59,7 +59,7 @@ Generation Data Save Path">
   <meta itemprop="description" content="Setup File File The operation of manually creating a settings file is not necessary, because on each generator activation, the generator goes to the Editor&gt;UIScriptGenerator directory to find out if there is an already existing settings file, and if it is not found, it automatically generates a new settings file in that location. If you need to create the settings file manually, select Tools&gt;UI Script Generator&gt;Create Setting in the menu bar, and the UIScriptGeneratorSetting.asset file will be created in the Editor&gt;UIScriptGenerator directory which contains all the setting data needed for the generator. The directory where the settings file is saved is fixed, if you move the settings file to another directory, the generator will create another new one in the Editor&gt;UIScriptGenerator directory. Setting Options Generation Data Save Path">
   <meta itemprop="datePublished" content="2025-05-31T10:42:37+08:00">
   <meta itemprop="dateModified" content="2025-05-31T10:42:37+08:00">
-  <meta itemprop="wordCount" content="2104">
+  <meta itemprop="wordCount" content="2142">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="UI Script Generator Documentation">
   <meta name="twitter:description" content="Setup File File The operation of manually creating a settings file is not necessary, because on each generator activation, the generator goes to the Editor&gt;UIScriptGenerator directory to find out if there is an already existing settings file, and if it is not found, it automatically generates a new settings file in that location. If you need to create the settings file manually, select Tools&gt;UI Script Generator&gt;Create Setting in the menu bar, and the UIScriptGeneratorSetting.asset file will be created in the Editor&gt;UIScriptGenerator directory which contains all the setting data needed for the generator. The directory where the settings file is saved is fixed, if you move the settings file to another directory, the generator will create another new one in the Editor&gt;UIScriptGenerator directory. Setting Options Generation Data Save Path">
@@ -331,6 +331,11 @@ Generation Data Save Path">
 <li>Manually disable the generator by selecting <strong>Tools&gt;UI Script Generator&gt;Disable</strong> in the menu bar, and then activate it again.</li>
 <li>Restart the Unity editor.</li>
 <li>Delete the generation data file corresponding to the prefab (same name as the prefab, stored in the directory defined by the <strong>Generation Data Save Path</strong> option in the settings file), then reactivate it.</li>
+</ul>
+<h2 id="unable-to-automatically-add-scripts-to-prefabs-when-first-generated">Unable to automatically add scripts to prefabs when first generated.</h2>
+<ul>
+<li>Check if the settings of <strong>Ui Script Assembly</strong> and <strong>Ui Script Name Space</strong> are correct.</li>
+<li>The set assembly may not have been loaded, try generating the script again.</li>
 </ul>
 <ul class="pa0">
   
