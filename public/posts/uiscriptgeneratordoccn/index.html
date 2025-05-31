@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -24,14 +24,14 @@ Generation Data Save Path
 
 Ui Script Save Path
 
-生成的UI脚本的存储目录。
 
+生成的UI脚本的存储目录。
 
 
 Ui Script Assembly
 
-生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
 
+生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
 
 
 Ui Script Name Space
@@ -145,12 +145,12 @@ Components Has Callback
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.8d048772ae72ab11245a0e296d1f2a36d3e3dd376c6c867394d6cc659c68fc37.css" >
 
 
 
@@ -166,16 +166,18 @@ Components Has Callback
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/ui-script-generator-doc-cn/">
+      <link rel="canonical" href="https://example.org/posts/uiscriptgeneratordoccn/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/ui-script-generator-doc-cn/">
+    <meta property="og:url" content="https://example.org/posts/uiscriptgeneratordoccn/">
   <meta property="og:site_name" content="Fire Cat">
   <meta property="og:title" content="UI Script Generator文档">
   <meta property="og:description" content="设置文件 文件 手动创建设置文件的操作不是必须的，因为在每次生成器激活时，生成器都会去Editor&gt;UIScriptGenerator目录查找是否有已存在的设置文件，若未找到则自动在该位置生成一个新的设置文件。 若需要手动创建设置文件，在菜单栏中选择：Tools&gt;UI Script Generator&gt;Create Setting，将会在Editor&gt;UIScriptGenerator目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。 设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在Editor&gt;UIScriptGenerator目录下再创建一个新的。 选项 Generation Data Save Path
 生成UI预制体脚本的相关数据存储在一个与预制体同名的ScriptObject对象中，这些ScriptObject对象都存储在这个目录。 Ui Script Save Path
-生成的UI脚本的存储目录。 Ui Script Assembly
-生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。 Ui Script Name Space
+生成的UI脚本的存储目录。
+Ui Script Assembly
+生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
+Ui Script Name Space
 生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。 Ui Panel Base Class Name
 面板类型的UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIPanelBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime&gt;UIPanelBase.cs，可根据情况删除（设置中的基类名称也要同步删除）。 Ui Widget Base Class Name
 挂件类型UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIWidgetBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime&gt;UIWidgetBase.cs目录，可根据情况删除（设置中的基类名称也要同步删除）。 Add Suffix
@@ -195,8 +197,10 @@ Components Has Callback
   <meta itemprop="name" content="UI Script Generator文档">
   <meta itemprop="description" content="设置文件 文件 手动创建设置文件的操作不是必须的，因为在每次生成器激活时，生成器都会去Editor&gt;UIScriptGenerator目录查找是否有已存在的设置文件，若未找到则自动在该位置生成一个新的设置文件。 若需要手动创建设置文件，在菜单栏中选择：Tools&gt;UI Script Generator&gt;Create Setting，将会在Editor&gt;UIScriptGenerator目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。 设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在Editor&gt;UIScriptGenerator目录下再创建一个新的。 选项 Generation Data Save Path
 生成UI预制体脚本的相关数据存储在一个与预制体同名的ScriptObject对象中，这些ScriptObject对象都存储在这个目录。 Ui Script Save Path
-生成的UI脚本的存储目录。 Ui Script Assembly
-生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。 Ui Script Name Space
+生成的UI脚本的存储目录。
+Ui Script Assembly
+生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
+Ui Script Name Space
 生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。 Ui Panel Base Class Name
 面板类型的UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIPanelBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime&gt;UIPanelBase.cs，可根据情况删除（设置中的基类名称也要同步删除）。 Ui Widget Base Class Name
 挂件类型UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIWidgetBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime&gt;UIWidgetBase.cs目录，可根据情况删除（设置中的基类名称也要同步删除）。 Add Suffix
@@ -214,8 +218,10 @@ Components Has Callback
   <meta name="twitter:title" content="UI Script Generator文档">
   <meta name="twitter:description" content="设置文件 文件 手动创建设置文件的操作不是必须的，因为在每次生成器激活时，生成器都会去Editor&gt;UIScriptGenerator目录查找是否有已存在的设置文件，若未找到则自动在该位置生成一个新的设置文件。 若需要手动创建设置文件，在菜单栏中选择：Tools&gt;UI Script Generator&gt;Create Setting，将会在Editor&gt;UIScriptGenerator目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。 设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在Editor&gt;UIScriptGenerator目录下再创建一个新的。 选项 Generation Data Save Path
 生成UI预制体脚本的相关数据存储在一个与预制体同名的ScriptObject对象中，这些ScriptObject对象都存储在这个目录。 Ui Script Save Path
-生成的UI脚本的存储目录。 Ui Script Assembly
-生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。 Ui Script Name Space
+生成的UI脚本的存储目录。
+Ui Script Assembly
+生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。
+Ui Script Name Space
 生成的UI脚本所在的命名空间。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上。此设置依据你的项目代码结构而定，默认命名空间为“UI”，若你自定义的生成器生成的UI代码不包含命名空间，则此设置可以为空。 Ui Panel Base Class Name
 面板类型的UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIPanelBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime&gt;UIPanelBase.cs，可根据情况删除（设置中的基类名称也要同步删除）。 Ui Widget Base Class Name
 挂件类型UI的脚本基类名称。若此设置不为空，则生成UI脚本时将自动继承自该名称对应的类。默认设置中的UIWidgetBase是作为示例的基类，没有其他作用，脚本位于UIScriptGenerator&gt;Runtime&gt;UIWidgetBase.cs目录，可根据情况删除（设置中的基类名称也要同步删除）。 Add Suffix
@@ -227,8 +233,10 @@ Components Has Callback
 选中子节点，在Inspector窗口中可以看到RectTransform组件下方出现了多个复选项，格式为“口 Generate xxx”，它们表示当前节点可以获取到的组件对象。 勾选任意一个选项
 在其下方会出现“Variable Name”文本框，其中的文本代表生成的脚本中用于存储该组件对象的变量的名称。你可以随意修改该名称，但不能为空。 若勾选的组件已注册到了设置文件的Components Has Callback中，则还会出现“Generate Callback Func”选项。若勾选此选项，在生成脚本时会生成该组件的回调函数并自动添加到回调委托。例如Button组件，名称为Select，则将生成OnSelectBtnClick回调函数，并添加到onClick委托。 默认设置中的组件及其回调委托 组件 回调委托 Button onClick Slider onValueChanged Toggle onValueChanged Dropdown、TMP_Dropdown onValueChanged InputField onValueChanged、onEndEdit、onSubmit TMP_InputField onValueChanged、onEndEdit、onSubmit、onSelect、onDeselect ScrollRect onValueChanged 保存并生成">
 
+      
+    
 	
-  </head><body class="ma0 avenir bg-near-white development">
+  </head><body class="ma0 avenir bg-near-white production">
 
     
    
@@ -295,15 +303,15 @@ Components Has Callback
 </li>
 <li>
 <p><strong>Ui Script Save Path</strong></p>
-<ul>
-<li>生成的UI脚本的存储目录。</li>
-</ul>
+</li>
+<li>
+<p>生成的UI脚本的存储目录。</p>
 </li>
 <li>
 <p><strong>Ui Script Assembly</strong></p>
-<ul>
-<li>生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。</li>
-</ul>
+</li>
+<li>
+<p>生成的UI脚本所在的程序集。这将用于查询已生成的脚本对象，并自动将其添加到对应的预制体上，若此设置为空则不会进行自动添加。</p>
 </li>
 <li>
 <p><strong>Ui Script Name Space</strong></p>
@@ -424,8 +432,8 @@ Components Has Callback
 </li>
 <li>将生成两个脚本文件（下面的 xxx 默认情况是UI预制体名称）
 <ul>
-<li>xxxBase.cs：ui脚本基类，其中包含存储组件对象的变量，获取组件对象的代码，回调函数。每次生成该文件都会被覆盖，所以不要在其中做任何修改。</li>
-<li>xxx.cs：这个文件中只定义了类型，没有其他代码，你将在这个脚本中编写业务逻辑。此文件只会在第一次生成脚本时创建，之后将不会再创建，除非你手动删除了该文件，所以你不需要担心业务代码被覆盖。</li>
+<li><strong>xxxBase.cs</strong>：ui脚本基类，其中包含存储组件对象的变量，获取组件对象的代码，回调函数。每次生成该文件都会被覆盖，所以不要在其中做任何修改。</li>
+<li><strong>xxx.cs</strong>：这个文件中只定义了类型，没有其他代码，你将在这个脚本中编写业务逻辑。此文件只会在第一次生成脚本时创建，之后将不会再创建，除非你手动删除了该文件，所以你不需要担心业务代码被覆盖。</li>
 </ul>
 </li>
 <li>默认生成器
@@ -481,7 +489,7 @@ Components Has Callback
 <h1 id="常见问题">常见问题</h1>
 <h2 id="选中节点后inspector中没有显示组件选项">选中节点后Inspector中没有显示组件选项</h2>
 <p>生成器会检查选中的节点是否属于预制体的子节点，若不是则不会进行Inspector绘制。这里用于检查的预制体是位于Project窗口中的资源文件，而不是Hierarchy窗口中正在编辑的预制体。若你选中的节点是新增的，并且未保存，则Inspector窗口不会进行绘制。勾选Auto Save，或者Ctrl+S手动保存，然后重新选中节点来解决此问题。</p>
-<h2 id="修改已生成的节点的位置名称">修改已生成的节点的位置、名称</h2>
+<h2 id="修改节点的位置名称">修改节点的位置、名称</h2>
 <p>修改节点位置或名称后，生成器激活时会自动刷新该节点的路径数据，但不会刷新变量名称，以防止脚本中已使用该变量名而导致报错。若需要刷新变量名，可以取消再勾选对应的组件选项，此时变量名会使用修改后的节点的名称。刷新路径、变量名后都需要再次生成脚本。</p>
 <h2 id="同一父节点下存在同名子节点">同一父节点下存在同名子节点</h2>
 <p>该生成器生成的代码都使用全路径在运行时查找节点并获取节点的组件对象，因此无法识别同一父节点下的同名子节点，这在勾选组件选项时也能发现（同名节点的Inspector绘制信息不会变化，因为它们使用了同一个生成数据对象）。所以需要保证拥有同一父节点的节点中不存在同名节点，否则运行时获取到的节点可能不是期望的节点而出现错误。</p>
@@ -513,7 +521,7 @@ Components Has Callback
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://example.org/" >
     &copy;  Fire Cat 2025 
   </a>
     <div><div class="ananke-socials"></div>
