@@ -123,9 +123,9 @@
           <h1 id="setup-file">Setup File</h1>
 <h2 id="file">File</h2>
 <ul>
-<li>The operation of manually creating a settings file is not necessary, because on each generator activation, the generator goes to the <strong>Editor&gt;UIScriptGenerator</strong> directory to find out if there is an already existing settings file, and if it is not found, it automatically generates a new settings file in that location.</li>
-<li>If you need to create the settings file manually, select <strong>Tools&gt;UI Script Generator&gt;Create Setting</strong> in the menu bar, and the UIScriptGeneratorSetting.asset file will be created in the <strong>Editor&gt;UIScriptGenerator</strong> directory which contains all the setting data needed for the generator.</li>
-<li>The directory where the settings file is saved is fixed, if you move the settings file to another directory, the generator will create another new one in the <strong>Editor&gt;UIScriptGenerator</strong> directory.</li>
+<li>The operation of manually creating a settings file is not necessary, because on each generator activation, the generator goes to the <strong>UIScriptGenerator</strong> directory to find out if there is an already existing settings file, and if it is not found, it automatically generates a new settings file in that location.</li>
+<li>If you need to create the settings file manually, select <strong>Tools&gt;UI Script Generator&gt;Create Setting</strong> in the menu bar, and the UIScriptGeneratorSetting.asset file will be created in the <strong>UIScriptGenerator</strong> directory which contains all the setting data needed for the generator.</li>
+<li>The directory where the settings file is saved is fixed, if you move the settings file to another directory, the generator will create another new one in the <strong>UIScriptGenerator</strong> directory.</li>
 </ul>
 <h2 id="setting-options">Setting Options</h2>
 <ul>
@@ -156,9 +156,9 @@
           <h1 id="设置文件">设置文件</h1>
 <h2 id="文件">文件</h2>
 <ul>
-<li>手动创建设置文件的操作不是必须的，因为在每次生成器激活时，生成器都会去<strong>Editor&gt;UIScriptGenerator</strong>目录查找是否有已存在的设置文件，若未找到则自动在该位置生成一个新的设置文件。</li>
-<li>若需要手动创建设置文件，在菜单栏中选择：<strong>Tools&gt;UI Script Generator&gt;Create Setting</strong>，将会在<strong>Editor&gt;UIScriptGenerator</strong>目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。</li>
-<li>设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在<strong>Editor&gt;UIScriptGenerator</strong>目录下再创建一个新的。</li>
+<li>手动创建设置文件的操作不是必须的，因为在每次生成器激活时，生成器都会去<strong>UIScriptGenerator</strong>目录查找是否有已存在的设置文件，若未找到则自动在该位置生成一个新的设置文件。</li>
+<li>若需要手动创建设置文件，在菜单栏中选择：<strong>Tools&gt;UI Script Generator&gt;Create Setting</strong>，将会在<strong>UIScriptGenerator</strong>目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。</li>
+<li>设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在<strong>UIScriptGenerator</strong>目录下再创建一个新的。</li>
 </ul>
 <h2 id="选项">选项</h2>
 <ul>
@@ -166,14 +166,14 @@
 <p><strong>Generation Data Save Path</strong></p>
 <ul>
 <li>生成UI预制体脚本的相关数据存储在一个与预制体同名的ScriptObject对象中，这些ScriptObject对象都存储在这个目录。</li>
-<li><strong>注意：默认设置目录为“UIScriptGenerator/Demo/GenerationData”，这是一个示例目录，你可以修改为你需要的目录</strong></li>
+<li><strong>注意：默认设置目录为“UIScriptGenerator/Demo/GenerationData”，这是为了满足示例需要而设置的临时目录，你应该在正式开发前将其修改为其他目录，并且新的目录不能位于UIScriptGenerator插件目录下，以避免更新插件时丢失数据，这非常重要。</strong></li>
 </ul>
 </li>
 <li>
 <p><strong>Ui Script Save Path</strong></p>
 <ul>
 <li>生成的UI脚本的存储目录。</li>
-<li><strong>注意：默认设置目录为“UIScriptGenerator/Demo/Scripts/UI”，这是一个示例目录，你可以修改为你需要的目录</strong></li>
+<li><strong>注意：默认设置目录为“UIScriptGenerator/Demo/Scripts/UI”，这是为了满足示例需要而设置的临时目录，你应该在正式开发前将其修改为其他目录，并且新的目录不能位于UIScriptGenerator插件目录下，以避免更新插件时丢失数据，这非常主要。</strong></li>
 </ul>
 </li>
 <li>

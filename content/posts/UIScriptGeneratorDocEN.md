@@ -11,18 +11,18 @@ title = 'UI Script Generator Documentation'
 
 ## File
 
-* The operation of manually creating a settings file is not necessary, because on each generator activation, the generator goes to the **Editor>UIScriptGenerator** directory to find out if there is an already existing settings file, and if it is not found, it automatically generates a new settings file in that location.
-* If you need to create the settings file manually, select **Tools>UI Script Generator>Create Setting** in the menu bar, and the UIScriptGeneratorSetting.asset file will be created in the **Editor>UIScriptGenerator** directory which contains all the setting data needed for the generator.
-* The directory where the settings file is saved is fixed, if you move the settings file to another directory, the generator will create another new one in the **Editor>UIScriptGenerator** directory.
+* The operation of manually creating a settings file is not necessary, because on each generator activation, the generator goes to the **UIScriptGenerator** directory to find out if there is an already existing settings file, and if it is not found, it automatically generates a new settings file in that location.
+* If you need to create the settings file manually, select **Tools>UI Script Generator>Create Setting** in the menu bar, and the UIScriptGeneratorSetting.asset file will be created in the **UIScriptGenerator** directory which contains all the setting data needed for the generator.
+* The directory where the settings file is saved is fixed, if you move the settings file to another directory, the generator will create another new one in the **UIScriptGenerator** directory.
 
 ## Setting Options
 
 * **Generation Data Save Path**
   * The data associated with generating a UI prefab script is stored in a ScriptObject object with the same name as the prefab, and these ScriptObject objects are stored in this directory.
-  * **Note: The default directory is “UIScriptGenerator/Demo/GenerationData”, this is a sample directory, you can change it to your desired directory**.
+  * **Note: The default directory is “UIScriptGenerator/Demo/GenerationData”. This is a temporary directory for example purposes, you should change it to another directory before development, and it is very important that the new directory is not located in the UIScriptGenerator plugin directory to avoid losing data when updating the plugin.**
 * **Ui Script Save Path**
   * Storage directory for generated UI scripts.
-  * **Note: The default directory is “UIScriptGenerator/Demo/Scripts/UI”, this is a sample directory, you can change it to your desired directory**.
+  * **Note: The default directory is “UIScriptGenerator/Demo/Scripts/UI”. This is a temporary directory for example purposes, you should change it to another directory before development, and it is very important that the new directory is not located in the UIScriptGenerator plugin directory to avoid losing data when updating the plugin.**
 * **AutoAddComponent**
   * If checked, it will be automatically added to the prefab after script generation. Only objects that inherit from MonoBehaviour can be added to GameObject.
 * **Ui Script Assembly**

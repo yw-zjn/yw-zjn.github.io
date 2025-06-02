@@ -11,18 +11,18 @@ title = 'UI Script Generator文档'
 
 ## 文件
 
-* 手动创建设置文件的操作不是必须的，因为在每次生成器激活时，生成器都会去**Editor>UIScriptGenerator**目录查找是否有已存在的设置文件，若未找到则自动在该位置生成一个新的设置文件。
-* 若需要手动创建设置文件，在菜单栏中选择：**Tools>UI Script Generator>Create Setting**，将会在**Editor>UIScriptGenerator**目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。
-* 设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在**Editor>UIScriptGenerator**目录下再创建一个新的。
+* 手动创建设置文件的操作不是必须的，因为在每次生成器激活时，生成器都会去**UIScriptGenerator**目录查找是否有已存在的设置文件，若未找到则自动在该位置生成一个新的设置文件。
+* 若需要手动创建设置文件，在菜单栏中选择：**Tools>UI Script Generator>Create Setting**，将会在**UIScriptGenerator**目录下创建UIScriptGeneratorSetting.asset文件，其中包含了生成器所需的所有设置数据。
+* 设置文件的保存目录是固定的，若你将设置文件转移到其他目录，则生成器会在**UIScriptGenerator**目录下再创建一个新的。
 
 ## 选项
 
 * **Generation Data Save Path**
   * 生成UI预制体脚本的相关数据存储在一个与预制体同名的ScriptObject对象中，这些ScriptObject对象都存储在这个目录。
-  * **注意：默认设置目录为“UIScriptGenerator/Demo/GenerationData”，这是一个示例目录，你可以修改为你需要的目录**
+  * **注意：默认设置目录为“UIScriptGenerator/Demo/GenerationData”，这是为了满足示例需要而设置的临时目录，你应该在正式开发前将其修改为其他目录，并且新的目录不能位于UIScriptGenerator插件目录下，以避免更新插件时丢失数据，这非常重要。**
 * **Ui Script Save Path**
   * 生成的UI脚本的存储目录。
-  * **注意：默认设置目录为“UIScriptGenerator/Demo/Scripts/UI”，这是一个示例目录，你可以修改为你需要的目录**
+  * **注意：默认设置目录为“UIScriptGenerator/Demo/Scripts/UI”，这是为了满足示例需要而设置的临时目录，你应该在正式开发前将其修改为其他目录，并且新的目录不能位于UIScriptGenerator插件目录下，以避免更新插件时丢失数据，这非常主要。**
 
 * **AutoAddComponent**
   * 若勾选，在脚本生成完成后将自动把它添加到预制体上。只有继承自MonoBehaviour的对象才能添加到GameObject上。
